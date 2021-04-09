@@ -21,6 +21,11 @@
 			document.download = browser => {
 				browser = browser || getBrowser(); // chrome/firefox
 				alert('SoonTM');
+				if (browser == 'firefox') {
+					return alert(
+						'Support for firefox will be available if and when backdrop-filter is available for it. Try using Brave Browser'
+					);
+				}
 			};
 		</script>
 	</head>

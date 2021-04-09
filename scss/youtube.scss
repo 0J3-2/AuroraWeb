@@ -20,8 +20,66 @@ ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
 }
 yt-chip-cloud-renderer,
 .html5-video-player.ytp-autonav-endscreen-cancelled-state,
-ytd-item-section-renderer.style-scope.ytd-watch-next-secondary-results-renderer {
+ytd-item-section-renderer.style-scope.ytd-watch-next-secondary-results-renderer,
+#container.ytd-searchbox,
+#masthead-container {
 	@include backgrounds.blurred;
+}
+#container.ytd-searchbox {
+	border: hidden !important;
+}
+yt-chip-cloud-renderer,
+#masthead-container {
+	// border-top-left-radius: 0px;
+	// border-bottom-left-radius: 0px;
+	// border-bottom-right-radius: 0px;
+	border-radius: 0 !important;
+}
+ytd-item-section-renderer.style-scope.ytd-watch-next-secondary-results-renderer {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+yt-related-chip-cloud-renderer.style-scope.ytd-watch-next-secondary-results-renderer,
+#secondary.ytd-watch-flexy {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+.ytp-chapter-hover-container {
+	width: inherit !important;
+}
+yt-chip-cloud-renderer {
+	#right-arrow,
+	#left-arrow {
+		&.yt-chip-cloud-renderer {
+			&#right-arrow-button {
+				background: linear-gradient(
+					90deg,
+					var(--backdropeffectclr),
+					rgba(0, 0, 0, 0.658)
+				) !important;
+			}
+			&#left-arrow-button {
+				background: linear-gradient(
+					-90deg,
+					var(--backdropeffectclr),
+					rgba(0, 0, 0, 0.658)
+				) !important;
+			}
+			&:before {
+				background: linear-gradient(90deg, #0000, var(--backdropeffectclr));
+			}
+		}
+	}
+	&,
+	* {
+		--yt-spec-general-background-a: var(--backdropeffectclr) !important;
+	}
+}
+
+#primary.style-scope.ytd-watch-flexy {
+	@include backgrounds.blurred;
+	border-radius: 0 !important;
+	padding-left: 10px;
 }
 
 ytd-app,
@@ -30,6 +88,7 @@ html {
 	background: #0000 !important;
 }
 .auroraBackground {
+	// gets created by js
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -43,15 +102,18 @@ html {
 #logo-icon.style-scope.ytd-topbar-logo-renderer {
 	width: 0;
 	display: block;
-	&::after {
-		content: concat(data.$wordmarkText, ' (Web version ', base.$version, ')');
-		position: absolute !important;
-		left: 5px;
-		width: 100vw;
-		font-family: 'Satisfy';
-		color: rgba(255, 255, 255, 0.8);
-		font-size: 19px;
-		font-weight: bold;
-		margin-top: 6px;
-	}
+}
+#country-code:after {
+	content: data.$wordmarkText + ' (Web version ' + base.$version + ')';
+	position: absolute !important;
+	left: 5px;
+	width: 100vw;
+	font-family: 'Satisfy';
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 19px;
+	font-weight: bold;
+	margin-top: 6px;
+}
+* {
+	--yt-spec-brand-background-primary: #0000 !important;
 }
