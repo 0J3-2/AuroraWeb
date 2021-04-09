@@ -22,6 +22,10 @@
 			"css": ["css/discord.css"]
 		},
 		{
+			"matches": ["*://web.whatsapp.com/*"],
+			"css": ["css/whatsapp.css"]
+		},
+		{
 			"matches": ["*://0j3-2.github.io/AuroraWeb/*"],
 			"js": ["js/githubPages.js"]
 		}

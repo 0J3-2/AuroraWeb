@@ -1,0 +1,32 @@
+@use '../Aurora/scss/data'; // Import Aurora Data
+@use './base'; // Import Base
+@use '../Aurora/scss/Mixins/backgrounds';
+@import '../Aurora/scss/DefaultVars'; // Import Default Settings
+
+html[dir] body {
+	background: var(--backdrop) !important;
+	#pane-side,
+	._3QfZd.two,
+	.JnmQF._3QmOg,
+	._3LX7r {
+		@include backgrounds.blurred;
+		// border-radius: 0px;
+	}
+	._1Flk2._1sFTb {
+		border-radius: 15px;
+	}
+	._3LX7r {
+		border-radius: 0px;
+	}
+	._1C2Q3.F-0gY {
+		margin-top: 1%;
+	}
+	--panel-header-background: transparent;
+	--border-default: transparent;
+	--search-container-background: transparent;
+	--search-input-background: transparent;
+}
+
+._1R3Un {
+	background: #0000;
+}
