@@ -3,7 +3,7 @@
 @use '../Aurora/scss/Mixins/backgrounds';
 @import '../Aurora/scss/DefaultVars'; // Import Default Settings
 
-/* /watch?v=* */
+/* site=/watch?v=* */
 ytd-watch-flexy[theater] #player-theater-container.ytd-watch-flexy,
 ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
 .html5-video-player.ytp-autonav-endscreen-cancelled-state {
@@ -45,9 +45,9 @@ yt-related-chip-cloud-renderer.style-scope.ytd-watch-next-secondary-results-rend
 	margin-top: 0 !important;
 	padding-top: 0 !important;
 }
-.ytp-chapter-hover-container {
-	width: inherit !important;
-}
+// .ytp-chapter-hover-container {
+// 	width: inherit !important;
+// }
 yt-chip-cloud-renderer {
 	#right-arrow,
 	#left-arrow {
@@ -104,11 +104,35 @@ html {
 	--yt-spec-brand-background-primary: #0000 !important;
 }
 
-/* / */
-#contentContainer.tp-yt-app-drawer,
-.style-scope.ytd-page-manager {
-	@include backgrounds.blurred;
-}
-ytd-post-renderer[uses-compact-lockup] {
-	@include backgrounds.coverBackground;
+/* site=/ */
+
+body.mainPage {
+	#contentContainer.tp-yt-app-drawer,
+	.style-scope.ytd-page-manager,
+	ytd-post-renderer[uses-compact-lockup],
+	#contentContainer.tp-yt-app-drawer,
+	ytd-mini-guide-renderer {
+		@include backgrounds.blurred;
+		border-radius: 0 !important;
+	}
+	#contentContainer.tp-yt-app-drawer,
+	ytd-mini-guide-renderer,
+	ytd-mini-guide-entry-renderer {
+		--app-drawer-content-container_-_background-color: transparent;
+	}
+	#chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+		top: 0 !important;
+	}
+	ytd-mini-guide-entry-renderer,
+	#guide-content.ytd-app {
+		background: #0000 !important;
+	}
+	#contentContainer.tp-yt-app-drawer,
+	.style-scope.ytd-page-manager,
+	ytd-post-renderer[uses-compact-lockup],
+	#contentContainer.tp-yt-app-drawer,
+	ytd-mini-guide-renderer {
+		@include backgrounds.blurred;
+		border-radius: 0 !important;
+	}
 }

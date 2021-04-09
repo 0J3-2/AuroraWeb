@@ -46,7 +46,7 @@
   /*Color When someone is Streaming*/
 }
 
-/* /watch?v=* */
+/* site=/watch?v=* */
 ytd-watch-flexy[theater] #player-theater-container.ytd-watch-flexy,
 ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
 .html5-video-player.ytp-autonav-endscreen-cancelled-state {
@@ -96,10 +96,6 @@ yt-related-chip-cloud-renderer.style-scope.ytd-watch-next-secondary-results-rend
   padding-top: 0 !important;
 }
 
-.ytp-chapter-hover-container {
-  width: inherit !important;
-}
-
 yt-chip-cloud-renderer #right-arrow.yt-chip-cloud-renderer#right-arrow-button,
 yt-chip-cloud-renderer #left-arrow.yt-chip-cloud-renderer#right-arrow-button {
   background: linear-gradient(90deg, var(--backdropeffectclr), rgba(0, 0, 0, 0.658)) !important;
@@ -146,18 +142,38 @@ html {
   --yt-spec-brand-background-primary: #0000 !important;
 }
 
-/* / */
-#contentContainer.tp-yt-app-drawer,
-.style-scope.ytd-page-manager {
+/* site=/ */
+body.mainPage #contentContainer.tp-yt-app-drawer,
+body.mainPage .style-scope.ytd-page-manager,
+body.mainPage ytd-post-renderer[uses-compact-lockup],
+body.mainPage #contentContainer.tp-yt-app-drawer,
+body.mainPage ytd-mini-guide-renderer {
   background: var(--backdropeffectclr) !important;
   backdrop-filter: var(--backdropeffect) !important;
   border-radius: 15px;
+  border-radius: 0 !important;
 }
-
-ytd-post-renderer[uses-compact-lockup] {
-  background: var(--backdrop) !important;
-  background-size: cover !important;
-  transition: background 1s;
+body.mainPage #contentContainer.tp-yt-app-drawer,
+body.mainPage ytd-mini-guide-renderer,
+body.mainPage ytd-mini-guide-entry-renderer {
+  --app-drawer-content-container_-_background-color: transparent;
+}
+body.mainPage #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+  top: 0 !important;
+}
+body.mainPage ytd-mini-guide-entry-renderer,
+body.mainPage #guide-content.ytd-app {
+  background: #0000 !important;
+}
+body.mainPage #contentContainer.tp-yt-app-drawer,
+body.mainPage .style-scope.ytd-page-manager,
+body.mainPage ytd-post-renderer[uses-compact-lockup],
+body.mainPage #contentContainer.tp-yt-app-drawer,
+body.mainPage ytd-mini-guide-renderer {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+  border-radius: 0 !important;
 }
 
 /*# sourceMappingURL=youtube.css.map */

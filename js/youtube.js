@@ -1,4 +1,3 @@
-// Sets the background of the site
 (() => {
 	const v = document.createElement('div');
 	v.classList.add('auroraBackground');
@@ -12,4 +11,9 @@
 		c.innerText = 'AuroraWeb';
 		console.log('c');
 	}, 1000);
+
+	if (document.location.pathname == '/') {
+		document.body.classList.add(['mainPage']);
+		document.body.setAttribute('path', document.location.pathname);
+	}
 })();
