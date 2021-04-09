@@ -30,3 +30,8 @@ html[dir] body {
 ._1R3Un {
 	background: #0000;
 }
+
+[data-app-text-template='*${appText}*'] {
+	font-weight: 400;
+	font-style: italic;
+}

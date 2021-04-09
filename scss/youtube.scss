@@ -104,6 +104,11 @@ html {
 	--yt-spec-brand-background-primary: #0000 !important;
 }
 
+tp-yt-iron-dropdown {
+	@include backgrounds.blurred;
+	border: hidden !important;
+}
+
 /* site=/ */
 
 body.mainPage {
