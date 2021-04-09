@@ -3,6 +3,7 @@
 @use '../Aurora/scss/Mixins/backgrounds';
 @import '../Aurora/scss/DefaultVars'; // Import Default Settings
 
+/* /watch?v=* */
 ytd-watch-flexy[theater] #player-theater-container.ytd-watch-flexy,
 ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
 .html5-video-player.ytp-autonav-endscreen-cancelled-state {
@@ -101,4 +102,13 @@ html {
 
 * {
 	--yt-spec-brand-background-primary: #0000 !important;
+}
+
+/* / */
+#contentContainer.tp-yt-app-drawer,
+.style-scope.ytd-page-manager {
+	@include backgrounds.blurred;
+}
+ytd-post-renderer[uses-compact-lockup] {
+	@include backgrounds.coverBackground;
 }

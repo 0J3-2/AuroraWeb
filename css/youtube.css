@@ -46,6 +46,7 @@
   /*Color When someone is Streaming*/
 }
 
+/* /watch?v=* */
 ytd-watch-flexy[theater] #player-theater-container.ytd-watch-flexy,
 ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
 .html5-video-player.ytp-autonav-endscreen-cancelled-state {
@@ -143,6 +144,20 @@ html {
 
 * {
   --yt-spec-brand-background-primary: #0000 !important;
+}
+
+/* / */
+#contentContainer.tp-yt-app-drawer,
+.style-scope.ytd-page-manager {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+
+ytd-post-renderer[uses-compact-lockup] {
+  background: var(--backdrop) !important;
+  background-size: cover !important;
+  transition: background 1s;
 }
 
 /*# sourceMappingURL=youtube.css.map */
