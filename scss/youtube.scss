@@ -1,0 +1,57 @@
+@use '../Aurora/scss/data'; // Import Aurora Data
+@use './base'; // Import Base
+@use '../Aurora/scss/Mixins/backgrounds';
+@import '../Aurora/scss/DefaultVars'; // Import Default Settings
+
+ytd-watch-flexy[theater] #player-theater-container.ytd-watch-flexy,
+ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
+.html5-video-player.ytp-autonav-endscreen-cancelled-state {
+	background: transparent !important;
+}
+
+.ytp-gradient-bottom {
+	display: none !important;
+}
+.ytp-chrome-bottom {
+	@include backgrounds.blurred;
+	border-radius: 0 !important;
+	width: inherit !important;
+	left: 0 !important;
+}
+yt-chip-cloud-renderer,
+.html5-video-player.ytp-autonav-endscreen-cancelled-state,
+ytd-item-section-renderer.style-scope.ytd-watch-next-secondary-results-renderer {
+	@include backgrounds.blurred;
+}
+
+ytd-app,
+body,
+html {
+	background: #0000 !important;
+}
+.auroraBackground {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -10000;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	background: var(--backdrop) !important;
+}
+
+#logo-icon.style-scope.ytd-topbar-logo-renderer {
+	width: 0;
+	display: block;
+	&::after {
+		content: concat(data.$wordmarkText, ' (Web version ', base.$version, ')');
+		position: absolute !important;
+		left: 5px;
+		width: 100vw;
+		font-family: 'Satisfy';
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 19px;
+		font-weight: bold;
+		margin-top: 6px;
+	}
+}

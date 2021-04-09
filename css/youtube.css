@@ -1,0 +1,109 @@
+@import '../Aurora/downloads/Aurora.theme.css';
+:root {
+  /*Color Variables*/
+  --main-color: linear-gradient(
+  	150deg,
+  	var(--gradient1),
+  	var(--gradient2)
+  );
+  /*Accent Color of the Theme*/
+  --gradient1: #3ecc9c;
+  /*First Gradient Color*/
+  --gradient2: #185a9d;
+  /*Second Gradient Color*/
+  --hover-color: rgb(67, 206, 162);
+  /*Secondary Accent of the Theme*/
+  --main-color-faded: rgba(67, 206, 162, 0.2);
+  /*Faded Main Color*/
+  /*Backdrop Variables*/
+  --backdrop: url(https://i.imgur.com/xcjXx3E.jpg);
+  /*Normal Backdrop*/
+  --backdropblurred: url(https://i.imgur.com/ExNrzGV.jpg);
+  /*Darker/Blurred Version of Backdrop : Will be removed in the future (see backdrop-filter)*/
+  --backdropeffect: blur(15px);
+  --backdropeffectclr: rgba(0, 0, 0, 0.28);
+  --backdrop-darkness: transparent;
+  /*Brightness of var(--backdrop);*/
+  /*Roundness Variables*/
+  --chat-avatar-roundness: 5px !important;
+  /*Roundness of chat avatars*/
+  --media-roundness: 50px !important;
+  /*General Roundness*/
+  --guild-hovered-roundness: 12px !important;
+  /*Roundness of servers on hover*/
+  /*Status Variables*/
+  --online: #43b581 !important;
+  /*Color When someone is Online*/
+  --idle: #faa61a !important;
+  /*Color When someone is Idle*/
+  --dnd: #f04747 !important;
+  /*Color When someone is in Do Not Disturb*/
+  --offline: #636b75 !important;
+  /*Color When someone is offline*/
+  --invisible: #747f8d !important;
+  /*Color When someone is Invisible*/
+  --streaming: #643da7 !important;
+  /*Color When someone is Streaming*/
+}
+
+ytd-watch-flexy[theater] #player-theater-container.ytd-watch-flexy,
+ytd-watch-flexy[fullscreen] #player-theater-container.ytd-watch-flexy,
+.html5-video-player.ytp-autonav-endscreen-cancelled-state {
+  background: transparent !important;
+}
+
+.ytp-gradient-bottom {
+  display: none !important;
+}
+
+.ytp-chrome-bottom {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+  border-radius: 0 !important;
+  width: inherit !important;
+  left: 0 !important;
+}
+
+yt-chip-cloud-renderer,
+.html5-video-player.ytp-autonav-endscreen-cancelled-state,
+ytd-item-section-renderer.style-scope.ytd-watch-next-secondary-results-renderer {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+
+ytd-app,
+body,
+html {
+  background: #0000 !important;
+}
+
+.auroraBackground {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -10000;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: var(--backdrop) !important;
+}
+
+#logo-icon.style-scope.ytd-topbar-logo-renderer {
+  width: 0;
+  display: block;
+}
+#logo-icon.style-scope.ytd-topbar-logo-renderer::after {
+  content: concat("Aurora v2.8.0", " (Web version ", "0.1.0", ")");
+  position: absolute !important;
+  left: 5px;
+  width: 100vw;
+  font-family: "Satisfy";
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+/*# sourceMappingURL=youtube.css.map */

@@ -1,0 +1,15 @@
+{
+	"name": "auroraweb",
+	"description": "Aurora for Web",
+	"repository": {
+		"url": "https://0j3-2.github.io/AuroraWeb"
+	},
+	"version": "0.1.0",
+	"dependencies": {
+		"sass": "^1.32.8"
+	},
+	"scripts": {
+		"build": "sass scss:css",
+		"watch": "sass scss:css --watch"
+	}
+}
