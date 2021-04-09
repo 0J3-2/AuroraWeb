@@ -13,6 +13,15 @@
 			"js": ["js/youtube.js"]
 		},
 		{
+			"matches": [
+				"*://*.discord.com/*",
+				"*://discord.com/*",
+				"*://*.discordapp.com/*",
+				"*://discordapp.com/*"
+			],
+			"css": ["css/discord.css"]
+		},
+		{
 			"matches": ["*://0j3-2.github.io/AuroraWeb/*"],
 			"js": ["js/githubPages.js"]
 		}
