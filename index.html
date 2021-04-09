@@ -15,17 +15,8 @@
 		<link rel="stylesheet" href="./Aurora/site/styles.css" />
 
 		<script>
-			document.getBrowser = () => {
-				return;
-			};
 			document.download = browser => {
-				browser = browser || document.getBrowser(); // chrome/firefox
-				alert('SoonTM');
-				if (browser == 'firefox') {
-					return alert(
-						'Support for firefox will be available if and when backdrop-filter is available for it. Try using Brave Browser'
-					);
-				}
+				document.location.href = 'https://0j3-2.github.io/AuroraWeb/install';
 			};
 		</script>
 	</head>
@@ -60,9 +51,9 @@
 
 				<h2>Downloads</h2>
 				<p>
-					<a href="JavaScript:document.download('chrome');">
-						Download for Chrome
-					</a>
+					<a href="JavaScript:document.download();"> Download </a>
+					<br />
+					<a href="https://github.com/0J3-2/AuroraWeb">Source</a>
 					<small
 						><a href="https://github.com/0J3-2/AuroraWeb/blob/main/install.md"
 							>How to Install</a
