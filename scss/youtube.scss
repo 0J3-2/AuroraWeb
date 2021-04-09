@@ -99,21 +99,6 @@ html {
 	background: var(--backdrop) !important;
 }
 
-#logo-icon.style-scope.ytd-topbar-logo-renderer {
-	width: 0;
-	display: block;
-}
-#country-code:after {
-	content: data.$wordmarkText + ' (Web version ' + base.$version + ')';
-	position: absolute !important;
-	left: 5px;
-	width: 100vw;
-	font-family: 'Satisfy';
-	color: rgba(255, 255, 255, 0.8);
-	font-size: 19px;
-	font-weight: bold;
-	margin-top: 6px;
-}
 * {
 	--yt-spec-brand-background-primary: #0000 !important;
 }

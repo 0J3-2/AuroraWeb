@@ -19,7 +19,7 @@
 				return;
 			};
 			document.download = browser => {
-				browser = browser || getBrowser(); // chrome/firefox
+				browser = browser || document.getBrowser(); // chrome/firefox
 				alert('SoonTM');
 				if (browser == 'firefox') {
 					return alert(
@@ -71,14 +71,6 @@
 					<a href="https://github.com/0J3-2/Aurora/issues/new">
 						Suggest a website to add support for
 					</a>
-					<br />
-					<br />
-					<br />
-					<small>
-						*Aurora Requires Experimental Web Platform Features to be enabled on
-						Powercord. See Powercord>General Settings>Advanced, to enable this
-						feature.
-					</small>
 				</p>
 
 				<p class="footer">
