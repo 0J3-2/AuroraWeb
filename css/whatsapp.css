@@ -76,8 +76,8 @@ html[dir] body ._1C2Q3.F-0gY {
 }
 
 [data-app-text-template="*${appText}*"] {
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 400 !important;
+  font-style: italic !important;
 }
 
 /*# sourceMappingURL=whatsapp.css.map */
