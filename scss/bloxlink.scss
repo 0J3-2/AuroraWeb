@@ -4,7 +4,7 @@
 
 // Variable Overwrites
 :root {
-	--backdropeffect: blur(100px);
+	--backdropeffect: var(--theme_backdropeffect, blur(100px));
 }
 
 /* / */

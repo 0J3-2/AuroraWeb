@@ -1,0 +1,165 @@
+@use "../Aurora/scss/Mixins/backgrounds";
+@use "../Aurora/scss/DefaultVars.scss";
+
+:root {
+	--backdropeffect: var(--theme_backdropeffect, blur(100px));
+}
+
+// fix grayscale
+@function grayscale($value) {
+	@return #{'grayscale(' + $value + ')'};
+}
+
+body.dark-theme {
+	background: transparent !important;
+	&::before {
+		background: var(--backdrop) !important;
+		background-size: cover !important;
+		transition: background 1s;
+		position: fixed;
+		content: '';
+		height: 100vh;
+		width: 100vw;
+		left: 0;
+		top: 0;
+		background-repeat: no-repeat;
+		background-position: center;
+		pointer-events: none;
+		box-shadow: inset 0 0 0 1000px var(--backdrop-darkness);
+	}
+}
+.dark-theme .dropdown-menu,
+.dark-theme .popover {
+	@include backgrounds.blurred(true);
+	.arrow {
+		display: none;
+	}
+}
+
+// games
+[path^='/games/'] {
+	.game-thumb-container {
+		margin-top: 10px !important;
+		img {
+			@include backgrounds.blurred(true);
+		}
+	}
+	.rbx-tabs-horizontal .nav-tabs,
+	#game-instances .stack-list .stack-row {
+		@include backgrounds.blurred(true);
+	}
+	.rbx-tabs-horizontal .rbx-tab {
+		width: 30% !important;
+		transition: width 1s;
+		&.active {
+			width: 39.99999% !important;
+		}
+		.rbx-tab-heading {
+			background: none;
+			box-shadow: none !important;
+		}
+	}
+	.store-card-add {
+		background: #ffffff;
+		.store-card-add-label {
+			color: #0000 !important;
+		}
+	}
+	.btr-badges-container .badge-row {
+		opacity: 1 !important;
+		background: #0000 !important;
+		@include backgrounds.blurred(true);
+		&.btr-notowned img {
+			filter: grayscale(100%);
+		}
+	}
+}
+
+body:not([path^='/badges']):not([path^='/games']) .content,
+.container-footer,
+.rbx-left-col,
+.rbx-header {
+	@include backgrounds.blurred(false);
+}
+body:not(:not([path^='/badges']):not([path^='/games'])) .content {
+	background: #0000;
+}
+.rbx-header .rbx-navbar li .nav-menu-title {
+	transition: padding-left 1s, padding-right 1s;
+	padding-left: 9px;
+	padding-right: 9px;
+	&:hover {
+		$padd: 12px;
+		padding-left: $padd;
+		padding-right: $padd;
+	}
+}
+.rbx-header {
+	.cursor-pointer {
+		transition: margin-left 1s;
+		margin-left: 0;
+		&:hover {
+			margin-left: 1em;
+		}
+	}
+}
+.simplebar-content-wrapper {
+	background: transparent !important;
+}
+.menu-vertical {
+	@include backgrounds.blurred(true);
+	.menu-option {
+		box-shadow: none !important;
+		.rbx-tab-heading {
+			transition: margin-left 1s;
+			margin-left: 0;
+		}
+		&.active .rbx-tab-heading {
+			margin-left: 1em !important;
+		}
+		&:hover .rbx-tab-heading {
+			margin-left: 0.5em;
+		}
+	}
+}
+
+// btr inv
+#btr-injected-inventory {
+	@include backgrounds.blurred(true);
+}
+
+// favourites
+[path^='/users'][path$='/favorites'] {
+	.section-content-off {
+		@include backgrounds.blurred(true);
+	}
+	.item-card-container .item-card-thumb-container {
+		&,
+		.thumbnail-2d-container {
+			background: #0000;
+		}
+	}
+}
+
+// blur with rounded border, nothing else
+.alert.alert-warning,
+.section-content,
+.games-switcher,
+[path^='/badges'] .thumbnail-span,
+[path^='/badges'] .item-thumbnail-container .asset-thumb-container {
+	@include backgrounds.blurred(true);
+}
+
+div#container-main {
+	padding-bottom: 0 !important;
+}
+
+// alerts
+.alert-system-feedback .alert {
+	display: none;
+}
+
+// head
+.rbx-header {
+	border: none !important;
+}

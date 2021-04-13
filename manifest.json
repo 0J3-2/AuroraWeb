@@ -35,6 +35,11 @@
 			"js": ["./js/addPagePath.js"]
 		},
 		{
+			"matches": ["*://roblox.com/*", "*://*.roblox.com/*"],
+			"css": ["css/roblox.css"],
+			"js": ["./js/addPagePath.js", "./js/roblox.js"]
+		},
+		{
 			"matches": ["*://0j3-2.github.io/AuroraWeb/*"],
 			"js": ["js/githubPages.js"]
 		}

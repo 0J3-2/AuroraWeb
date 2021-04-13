@@ -1,0 +1,215 @@
+:root {
+  /*Color Variables*/
+  --main-color: linear-gradient(
+  	150deg,
+  	var(--gradient1),
+  	var(--gradient2)
+  );
+  /*Accent Color of the Theme*/
+  --gradient1: #3ecc9c;
+  /*First Gradient Color*/
+  --gradient2: #185a9d;
+  /*Second Gradient Color*/
+  --hover-color: rgb(67, 206, 162);
+  /*Secondary Accent of the Theme*/
+  --main-color-faded: rgba(67, 206, 162, 0.2);
+  /*Faded Main Color*/
+  /*Backdrop Variables*/
+  --backdrop: url(https://i.imgur.com/xcjXx3E.jpg);
+  /*Normal Backdrop*/
+  --backdropblurred: url(https://i.imgur.com/ExNrzGV.jpg);
+  /*Darker/Blurred Version of Backdrop : Will be removed in the future (see backdrop-filter)*/
+  --backdropeffect: blur(15px);
+  --backdropeffectclr: rgba(0, 0, 0, 0.28);
+  --backdrop-darkness: transparent;
+  /*Brightness of var(--backdrop);*/
+  /*Roundness Variables*/
+  --chat-avatar-roundness: 5px !important;
+  /*Roundness of chat avatars*/
+  --media-roundness: 50px !important;
+  /*General Roundness*/
+  --guild-hovered-roundness: 12px !important;
+  /*Roundness of servers on hover*/
+  /*Status Variables*/
+  --online: #43b581 !important;
+  /*Color When someone is Online*/
+  --idle: #faa61a !important;
+  /*Color When someone is Idle*/
+  --dnd: #f04747 !important;
+  /*Color When someone is in Do Not Disturb*/
+  --offline: #636b75 !important;
+  /*Color When someone is offline*/
+  --invisible: #747f8d !important;
+  /*Color When someone is Invisible*/
+  --streaming: #643da7 !important;
+  /*Color When someone is Streaming*/
+}
+
+:root {
+  --backdropeffect: var(--theme_backdropeffect, blur(100px));
+}
+
+body.dark-theme {
+  background: transparent !important;
+}
+body.dark-theme::before {
+  background: var(--backdrop) !important;
+  background-size: cover !important;
+  transition: background 1s;
+  position: fixed;
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1000px var(--backdrop-darkness);
+}
+
+.dark-theme .dropdown-menu,
+.dark-theme .popover {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+.dark-theme .dropdown-menu .arrow,
+.dark-theme .popover .arrow {
+  display: none;
+}
+
+[path^="/games/"] .game-thumb-container {
+  margin-top: 10px !important;
+}
+[path^="/games/"] .game-thumb-container img {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+[path^="/games/"] .rbx-tabs-horizontal .nav-tabs,
+[path^="/games/"] #game-instances .stack-list .stack-row {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+[path^="/games/"] .rbx-tabs-horizontal .rbx-tab {
+  width: 30% !important;
+  transition: width 1s;
+}
+[path^="/games/"] .rbx-tabs-horizontal .rbx-tab.active {
+  width: 39.99999% !important;
+}
+[path^="/games/"] .rbx-tabs-horizontal .rbx-tab .rbx-tab-heading {
+  background: none;
+  box-shadow: none !important;
+}
+[path^="/games/"] .store-card-add {
+  background: #ffffff;
+}
+[path^="/games/"] .store-card-add .store-card-add-label {
+  color: #0000 !important;
+}
+[path^="/games/"] .btr-badges-container .badge-row {
+  opacity: 1 !important;
+  background: #0000 !important;
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+[path^="/games/"] .btr-badges-container .badge-row.btr-notowned img {
+  filter: grayscale(100%);
+}
+
+body:not([path^="/badges"]):not([path^="/games"]) .content,
+.container-footer,
+.rbx-left-col,
+.rbx-header {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+}
+
+body:not(:not([path^="/badges"]):not([path^="/games"])) .content {
+  background: #0000;
+}
+
+.rbx-header .rbx-navbar li .nav-menu-title {
+  transition: padding-left 1s, padding-right 1s;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.rbx-header .rbx-navbar li .nav-menu-title:hover {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.rbx-header .cursor-pointer {
+  transition: margin-left 1s;
+  margin-left: 0;
+}
+.rbx-header .cursor-pointer:hover {
+  margin-left: 1em;
+}
+
+.simplebar-content-wrapper {
+  background: transparent !important;
+}
+
+.menu-vertical {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+.menu-vertical .menu-option {
+  box-shadow: none !important;
+}
+.menu-vertical .menu-option .rbx-tab-heading {
+  transition: margin-left 1s;
+  margin-left: 0;
+}
+.menu-vertical .menu-option.active .rbx-tab-heading {
+  margin-left: 1em !important;
+}
+.menu-vertical .menu-option:hover .rbx-tab-heading {
+  margin-left: 0.5em;
+}
+
+#btr-injected-inventory {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+
+[path^="/users"][path$="/favorites"] .section-content-off {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+[path^="/users"][path$="/favorites"] .item-card-container .item-card-thumb-container,
+[path^="/users"][path$="/favorites"] .item-card-container .item-card-thumb-container .thumbnail-2d-container {
+  background: #0000;
+}
+
+.alert.alert-warning,
+.section-content,
+.games-switcher,
+[path^="/badges"] .thumbnail-span,
+[path^="/badges"] .item-thumbnail-container .asset-thumb-container {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+
+div#container-main {
+  padding-bottom: 0 !important;
+}
+
+.alert-system-feedback .alert {
+  display: none;
+}
+
+.rbx-header {
+  border: none !important;
+}
+
+/*# sourceMappingURL=roblox.css.map */

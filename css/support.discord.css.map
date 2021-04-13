@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/support.discord.scss","../Aurora/scss/Mixins/_backgrounds.scss"],"names":[],"mappings":"AACA;EACC;;;AAED;ECHC;EACA;EACA;EDGA;EACA;;AACA;EACC;EACA;;AAED;EACC;;AAED;EACC;EACA;EACA;;AAED;EACC;EACA;;;AAIF;EACC","file":"support.discord.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/support.discord.scss","../Aurora/scss/Mixins/_backgrounds.scss"],"names":[],"mappings":"AACA;EACC;;;AAED;ECHC;EACA;EAEC;EDED;EACA;;AACA;EACC;EACA;;AAED;EACC;;AAED;EACC;EACA;EACA;;AAED;EACC;EACA;;;AAIF;EACC","file":"support.discord.css"}
