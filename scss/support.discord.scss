@@ -1,0 +1,29 @@
+@use '../Aurora/scss/Mixins/backgrounds';
+.post * {
+	z-index: 10000 !important;
+}
+.post > * {
+	@include backgrounds.blurred;
+	border-radius: 0 !important;
+	padding: 20px 20px;
+	&:first-child {
+		border-top-left-radius: 15px !important;
+		border-top-right-radius: 15px !important;
+	}
+	.comment {
+		border-bottom-color: transparent !important;
+	}
+	&:nth-last-child(2) {
+		border-bottom-left-radius: 15px !important;
+		border-bottom-right-radius: 15px !important;
+		border-bottom: none;
+	}
+	&:nth-last-child(1) {
+		border-radius: 15px !important;
+		border-bottom: none;
+	}
+}
+
+body::before {
+	position: fixed;
+}

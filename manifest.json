@@ -26,6 +26,10 @@
 			"css": ["css/discord.cdn.css"]
 		},
 		{
+			"matches": ["*://support.discord.com/*", "*://*.support.discord.com/*"],
+			"css": ["css/support.discord.css"]
+		},
+		{
 			"matches": ["*://web.whatsapp.com/*"],
 			"css": ["css/whatsapp.css"]
 		},
