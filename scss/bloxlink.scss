@@ -1,0 +1,84 @@
+// https://blox.link
+@use '../Aurora/scss/Mixins/backgrounds';
+@use '../Aurora/scss/DefaultVars.scss';
+
+// Variable Overwrites
+:root {
+	--backdropeffect: blur(100px);
+}
+
+/* / */
+body[path='/'],
+body.mainPage {
+	#__next::before {
+		@include backgrounds.blurred;
+		content: ' ';
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 90vw;
+		height: 100vh;
+		z-index: -49;
+	}
+	.relative.py-5.bg-dark {
+		@include backgrounds.blurred;
+	}
+}
+
+/* /verification/[id] */
+body[path^='/verification'] {
+	.mt-5 {
+		margin-top: 0;
+	}
+}
+
+/* /account */
+body[path^='/account'] {
+	.px-4.py-6.sm\:px-0 {
+		margin-top: 4.5rem;
+	}
+
+	.container.bg-gray-900 {
+		@include backgrounds.blurred;
+	}
+}
+
+/* global */
+// Backgrounds
+body {
+	background: transparent !important;
+}
+body::before {
+	content: ' ';
+	@include backgrounds.coverBackground;
+	position: fixed;
+	min-width: 100vw;
+	min-height: 100vh;
+	z-index: -50;
+}
+// General Colours
+.bg-gray-800,
+.bg-darker,
+.bg-dark {
+	@include backgrounds.blurred;
+	border-radius: 0;
+}
+
+// Sidebar Sticky
+aside.w-1\/6.max-h-full.bg-darker.hidden.lg\:flex {
+	position: sticky;
+}
+
+// More Menu
+.rounded-lg.shadow-xs.overflow-hidden {
+	&,
+	* {
+		z-index: 1000;
+	}
+}
+
+// Remove City
+img[src='/img/bloxlink_city.png'] {
+	display: none;
+}

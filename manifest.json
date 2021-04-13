@@ -4,10 +4,6 @@
 	"version": "0.1.0",
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
-			"js": ["extension.js"]
-		},
-		{
 			"matches": ["*://*.youtube.com/*", "*://youtube.com/*"],
 			"css": ["css/youtube.css"],
 			"js": ["js/youtube.js"]
@@ -32,6 +28,11 @@
 		{
 			"matches": ["*://web.whatsapp.com/*"],
 			"css": ["css/whatsapp.css"]
+		},
+		{
+			"matches": ["*://blox.link/*", "*://*.blox.link/*"],
+			"css": ["css/bloxlink.css"],
+			"js": ["./js/addPagePath.js"]
 		},
 		{
 			"matches": ["*://0j3-2.github.io/AuroraWeb/*"],

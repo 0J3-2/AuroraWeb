@@ -1,0 +1,127 @@
+:root {
+  /*Color Variables*/
+  --main-color: linear-gradient(
+  	150deg,
+  	var(--gradient1),
+  	var(--gradient2)
+  );
+  /*Accent Color of the Theme*/
+  --gradient1: #3ecc9c;
+  /*First Gradient Color*/
+  --gradient2: #185a9d;
+  /*Second Gradient Color*/
+  --hover-color: rgb(67, 206, 162);
+  /*Secondary Accent of the Theme*/
+  --main-color-faded: rgba(67, 206, 162, 0.2);
+  /*Faded Main Color*/
+  /*Backdrop Variables*/
+  --backdrop: url(https://i.imgur.com/xcjXx3E.jpg);
+  /*Normal Backdrop*/
+  --backdropblurred: url(https://i.imgur.com/ExNrzGV.jpg);
+  /*Darker/Blurred Version of Backdrop : Will be removed in the future (see backdrop-filter)*/
+  --backdropeffect: blur(15px);
+  --backdropeffectclr: rgba(0, 0, 0, 0.28);
+  --backdrop-darkness: transparent;
+  /*Brightness of var(--backdrop);*/
+  /*Roundness Variables*/
+  --chat-avatar-roundness: 5px !important;
+  /*Roundness of chat avatars*/
+  --media-roundness: 50px !important;
+  /*General Roundness*/
+  --guild-hovered-roundness: 12px !important;
+  /*Roundness of servers on hover*/
+  /*Status Variables*/
+  --online: #43b581 !important;
+  /*Color When someone is Online*/
+  --idle: #faa61a !important;
+  /*Color When someone is Idle*/
+  --dnd: #f04747 !important;
+  /*Color When someone is in Do Not Disturb*/
+  --offline: #636b75 !important;
+  /*Color When someone is offline*/
+  --invisible: #747f8d !important;
+  /*Color When someone is Invisible*/
+  --streaming: #643da7 !important;
+  /*Color When someone is Streaming*/
+}
+
+:root {
+  --backdropeffect: blur(100px);
+}
+
+/* / */
+body[path="/"] #__next::before,
+body.mainPage #__next::before {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+  content: " ";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 100vh;
+  z-index: -49;
+}
+body[path="/"] .relative.py-5.bg-dark,
+body.mainPage .relative.py-5.bg-dark {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+
+/* /verification/[id] */
+body[path^="/verification"] .mt-5 {
+  margin-top: 0;
+}
+
+/* /account */
+body[path^="/account"] .px-4.py-6.sm\:px-0 {
+  margin-top: 4.5rem;
+}
+body[path^="/account"] .container.bg-gray-900 {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+}
+
+/* global */
+body {
+  background: transparent !important;
+}
+
+body::before {
+  content: " ";
+  background: var(--backdrop) !important;
+  background-size: cover !important;
+  transition: background 1s;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -50;
+}
+
+.bg-gray-800,
+.bg-darker,
+.bg-dark {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+  border-radius: 0;
+}
+
+aside.w-1\/6.max-h-full.bg-darker.hidden.lg\:flex {
+  position: sticky;
+}
+
+.rounded-lg.shadow-xs.overflow-hidden,
+.rounded-lg.shadow-xs.overflow-hidden * {
+  z-index: 1000;
+}
+
+img[src="/img/bloxlink_city.png"] {
+  display: none;
+}
+
+/*# sourceMappingURL=bloxlink.css.map */

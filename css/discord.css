@@ -794,6 +794,22 @@ div#app-mount {
   background: #22222265;
 }
 
+/*1.k. OAuth2*/
+.authorize-3eAFPo, .authorize-3eAFPo > * {
+  background: #0000;
+}
+
+.oauth2Wrapper-mHbF5q {
+  background: var(--backdropeffectclr) !important;
+  backdrop-filter: var(--backdropeffect) !important;
+  border-radius: 15px;
+  background: #0000;
+}
+
+.footer-3ZalXG {
+  background: #0000 !important;
+}
+
 /*============== END OF SECTION ============== */
 /*2. Titlebar*/
 /*2.a. Main Titlebar*/
